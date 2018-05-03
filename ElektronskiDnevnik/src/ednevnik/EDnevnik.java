@@ -1,5 +1,8 @@
 package ednevnik;
 
-public class EDnevnik {
+import java.util.LinkedList;
 
+public class EDnevnik {
+	LinkedList<Razred> razredi;
+	String skolskaGodina;
 }
