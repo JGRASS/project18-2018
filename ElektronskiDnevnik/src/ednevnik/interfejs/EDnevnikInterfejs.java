@@ -1,4 +1,8 @@
-package ednevnik;
+package ednevnik.interfejs;
+
+import ednevnik.Odeljenje;
+import ednevnik.Razred;
+import ednevnik.Ucenik;
 
 public interface EDnevnikInterfejs {
 
