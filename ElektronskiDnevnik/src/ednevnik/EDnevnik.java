@@ -2,8 +2,13 @@ package ednevnik;
 
 import java.util.LinkedList;
 
+import ednevnik.sistemskeoperacije.SODodajNapomenuUceniku;
+import ednevnik.sistemskeoperacije.SODodajOceneUceniku;
 import ednevnik.sistemskeoperacije.SODodajOdeljenje;
+import ednevnik.sistemskeoperacije.SODodajPlanCasovaPredmetu;
 import ednevnik.sistemskeoperacije.SODodajRazred;
+import ednevnik.sistemskeoperacije.SODodajUcenike;
+import ednevnik.sistemskeoperacije.SOVratiUcenika;
 
 public class EDnevnik implements EDnevnikInterfejs {
 	private LinkedList<Razred> razredi;
@@ -45,7 +50,28 @@ public class EDnevnik implements EDnevnikInterfejs {
 
 	@Override
 	public void dodajUcenike(Ucenik ucenik, int brojRazreda, int brojOdeljenja) {
-		
+		SODodajUcenike.izvrsi(ucenik, razredi, brojRazreda, brojOdeljenja);
+	}
+
+	@Override
+	public void dodajOceneUceniku(Ocena ocena, Ucenik ucenik) {
+		SODodajOceneUceniku.izvrsi(ocena, ucenik);
+	}
+ 
+	@Override
+	public void dodajNapomenuUceniku(String napomena, Ucenik ucenik) {
+		SODodajNapomenuUceniku.izvrsi(napomena, ucenik);
+	}
+
+	@Override
+	public void dodajPlanCasovaPredmetu(String plan, Predmet predmet) {
+		SODodajPlanCasovaPredmetu.izvrsi(plan, predmet);
+	}
+	
+	@Override
+	public Ucenik vratiUcenika(int razred, int odeljenje, String imePrezime, String imeRoditelja) {
+		return SOVratiUcenika.izvrsi(razredi, razred, odeljenje, 
+				imePrezime, imeRoditelja);
 	}
 	
 }
