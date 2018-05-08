@@ -1,4 +1,4 @@
-package ednevnik.sistemskeoperacije;
+ package ednevnik.sistemskeoperacije;
 
 import ednevnik.Ocena;
 import ednevnik.Ucenik;

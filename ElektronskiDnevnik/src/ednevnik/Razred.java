@@ -27,5 +27,8 @@ public class Razred {
 			return true;
 		return false;
 	}
-	
+	@Override
+	public String toString() {
+		return "Razred [redniBroj=" + redniBroj + ", odeljenja=" + odeljenja + "]";
+	}
 }

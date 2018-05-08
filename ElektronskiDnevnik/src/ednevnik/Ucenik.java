@@ -116,9 +116,11 @@ public class Ucenik {
 			return false;
 		return true;
 	}
-	
-	
-	
-	
-	
+	@Override
+	public String toString() {
+		return "Ucenik [imePrezime=" + imePrezime + ", imeRoditelja=" + imeRoditelja + ", jmbg=" + jmbg + ", ocene="
+				+ ocene + ", opravdaniIzostanci=" + opravdaniIzostanci + ", neopravdaniIzostanci="
+				+ neopravdaniIzostanci + ", napomene=" + napomene + "]";
+	}
+		
 }
