@@ -5,8 +5,22 @@ import java.util.LinkedList;
 import ednevnik.Razred;
 import ednevnik.Ucenik;
 
+/**
+ * Klasa koja sadrzi metodu SODodajUcenika
+ * @author Milos Pecikoza
+ * @author Ana Slovic
+ * @author Aleksa Vucetic
+ * @version 1.0
+ */
 public class SODodajUcenike {
 
+	/**
+	 * Metoda koja dodaje ucenika u odredjeni razred i odeljenje
+	 * @param ucenik kao objekat klase Ucenik
+	 * @param razredi lista razreda
+	 * @param brojRazreda redni broj razreda
+	 * @param brojOdeljenja 
+	 */
 	public static void izvrsi (Ucenik ucenik, LinkedList<Razred> razredi, int brojRazreda, 
 			int brojOdeljenja) {
 		
