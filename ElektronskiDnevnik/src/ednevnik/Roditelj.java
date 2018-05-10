@@ -15,7 +15,7 @@ public class Roditelj {
 	private String imePrezime;
 	
 	/**
-	 * Atribut koji pokazuje jmbg roditelja
+	 * Atribut koji pokazuje jmbg ucenika
 	 */
 	private String jmbg;
 	
