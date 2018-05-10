@@ -1,5 +1,6 @@
 package ednevnik;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 
 import ednevnik.interfejs.EDnevnikInterfejs;
@@ -19,7 +20,7 @@ import ednevnik.sistemskeoperacije.SOVratiUcenika;
  * @author Aleksa Vucetic
  * @version 1.0
  */
-public class EDnevnik implements EDnevnikInterfejs {
+public class EDnevnik implements EDnevnikInterfejs, Serializable{
 	
 	/**
 	 * Lista koja sadrzi objekte klase Razred
