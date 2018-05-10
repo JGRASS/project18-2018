@@ -23,6 +23,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
+import javax.swing.JButton;
 
 public class UlazGUI extends JFrame {
 
@@ -45,6 +46,7 @@ public class UlazGUI extends JFrame {
 	private JLabel lblLozinka;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 	private JPasswordField passwordField;
+	private JButton btnPrijaviSe;
 
 	/**
 	 * Launch the application.
@@ -118,6 +120,7 @@ public class UlazGUI extends JFrame {
 			panel_1.add(getTextFieldKorisnickoIme());
 			panel_1.add(getLblLozinka());
 			panel_1.add(getPasswordField());
+			panel_1.add(getBtnPrijaviSe());
 		}
 		return panel_1;
 	}
@@ -125,7 +128,7 @@ public class UlazGUI extends JFrame {
 		if (label == null) {
 			label = new JLabel("");
 			label.setIcon(new ImageIcon(UlazGUI.class.getResource("/icons/Group-icon (3).png")));
-			label.setBounds(190, 53, 67, 58);
+			label.setBounds(188, 33, 67, 58);
 		}
 		return label;
 	}
@@ -133,7 +136,7 @@ public class UlazGUI extends JFrame {
 		if (label_1 == null) {
 			label_1 = new JLabel("");
 			label_1.setIcon(new ImageIcon(UlazGUI.class.getResource("/icons/Shield-icon (2).png")));
-			label_1.setBounds(310, 53, 60, 58);
+			label_1.setBounds(308, 33, 60, 58);
 		}
 		return label_1;
 	}
@@ -141,7 +144,7 @@ public class UlazGUI extends JFrame {
 		if (label_2 == null) {
 			label_2 = new JLabel("");
 			label_2.setIcon(new ImageIcon(UlazGUI.class.getResource("/icons/Degree-icon (3).png")));
-			label_2.setBounds(73, 53, 67, 58);
+			label_2.setBounds(71, 33, 67, 58);
 		}
 		return label_2;
 	}
@@ -151,7 +154,7 @@ public class UlazGUI extends JFrame {
 			rdbtnProfesor.setBackground(new Color(255, 255, 255));
 			buttonGroup.add(rdbtnProfesor);
 			rdbtnProfesor.setFont(new Font("Open Sans", Font.PLAIN, 11));
-			rdbtnProfesor.setBounds(64, 116, 95, 23);
+			rdbtnProfesor.setBounds(62, 96, 95, 23);
 		}
 		return rdbtnProfesor;
 	}
@@ -161,7 +164,7 @@ public class UlazGUI extends JFrame {
 			rdbtnRoditelj.setBackground(new Color(255, 255, 255));
 			buttonGroup.add(rdbtnRoditelj);
 			rdbtnRoditelj.setFont(new Font("Open Sans", Font.PLAIN, 11));
-			rdbtnRoditelj.setBounds(161, 116, 123, 23);
+			rdbtnRoditelj.setBounds(159, 96, 123, 23);
 		}
 		return rdbtnRoditelj;
 	}
@@ -171,7 +174,7 @@ public class UlazGUI extends JFrame {
 			rdbtnAdministracija.setBackground(new Color(255, 255, 255));
 			buttonGroup.add(rdbtnAdministracija);
 			rdbtnAdministracija.setFont(new Font("Open Sans", Font.PLAIN, 11));
-			rdbtnAdministracija.setBounds(286, 116, 109, 23);
+			rdbtnAdministracija.setBounds(284, 96, 109, 23);
 		}
 		return rdbtnAdministracija;
 	}
@@ -179,14 +182,14 @@ public class UlazGUI extends JFrame {
 		if (lblKorisnikoIme == null) {
 			lblKorisnikoIme = new JLabel("Korisni\u010Dko ime:");
 			lblKorisnikoIme.setFont(new Font("Open Sans", Font.PLAIN, 12));
-			lblKorisnikoIme.setBounds(115, 164, 95, 14);
+			lblKorisnikoIme.setBounds(113, 144, 95, 14);
 		}
 		return lblKorisnikoIme;
 	}
 	private JTextField getTextFieldKorisnickoIme() {
 		if (textFieldKorisnickoIme == null) {
 			textFieldKorisnickoIme = new JTextField();
-			textFieldKorisnickoIme.setBounds(214, 162, 109, 20);
+			textFieldKorisnickoIme.setBounds(212, 142, 109, 20);
 			textFieldKorisnickoIme.setColumns(10);
 		}
 		return textFieldKorisnickoIme;
@@ -195,14 +198,14 @@ public class UlazGUI extends JFrame {
 		if (lblLozinka == null) {
 			lblLozinka = new JLabel("Lozinka:");
 			lblLozinka.setFont(new Font("Open Sans", Font.PLAIN, 12));
-			lblLozinka.setBounds(115, 196, 46, 14);
+			lblLozinka.setBounds(113, 176, 46, 14);
 		}
 		return lblLozinka;
 	}
 	private JPasswordField getPasswordField() {
 		if (passwordField == null) {
 			passwordField = new JPasswordField();
-			passwordField.setBounds(214, 193, 109, 20);
+			passwordField.setBounds(212, 173, 109, 20);
 		}
 		return passwordField;
 	}
@@ -216,5 +219,13 @@ public class UlazGUI extends JFrame {
 			if (opcija == JOptionPane.YES_OPTION)
 				System.exit(0);
 	}
-
+	private JButton getBtnPrijaviSe() {
+		if (btnPrijaviSe == null) {
+			btnPrijaviSe = new JButton("Prijavi se");
+			btnPrijaviSe.setBackground(new Color(204, 255, 153));
+			btnPrijaviSe.setFont(new Font("Open Sans", Font.PLAIN, 11));
+			btnPrijaviSe.setBounds(166, 210, 100, 23);
+		}
+		return btnPrijaviSe;
+	}
 }
