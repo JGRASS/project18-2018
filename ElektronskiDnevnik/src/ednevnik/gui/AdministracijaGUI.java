@@ -83,14 +83,6 @@ public class AdministracijaGUI extends JFrame {
 		setContentPane(contentPane);
 		contentPane.add(getScrollPane(), BorderLayout.CENTER);
 		contentPane.add(getPanel(), BorderLayout.EAST);
-		comboBoxDodaj.addItem("Razred");
-		comboBoxDodaj.addItem("Odeljenje");
-		comboBoxDodaj.addItem("Profesor");
-		
-		comboBoxObrisi.addItem("Razred");
-		comboBoxObrisi.addItem("Odeljenje");
-		comboBoxObrisi.addItem("Profesor");
-		
 		
 	}
 
@@ -133,6 +125,7 @@ public class AdministracijaGUI extends JFrame {
 	private JPanel getPanel() {
 		if (panel == null) {
 			panel = new JPanel();
+			panel.setVisible(false);
 			panel.setBackground(new Color(204, 255, 153));
 			panel.setPreferredSize(new Dimension(300, 10));
 			panel.setLayout(null);
@@ -146,6 +139,11 @@ public class AdministracijaGUI extends JFrame {
 			panel.add(getComboBoxObrisi());
 			panel.add(getBtnObrii());
 			panel.add(getComboBox3());
+			
+			JComboBox comboBox = new JComboBox();
+			comboBox.setEnabled(false);
+			comboBox.setBounds(200, 134, 71, 20);
+			panel.add(comboBox);
 		}
 		return panel;
 	}
@@ -186,6 +184,7 @@ public class AdministracijaGUI extends JFrame {
 	private JComboBox getComboBox_1() {
 		if (comboBoxDodaj == null) {
 			comboBoxDodaj = new JComboBox();
+			comboBoxDodaj.setModel(new DefaultComboBoxModel(new String[] {"Profesor", "Odeljenje", "Razred"}));
 			comboBoxDodaj.setForeground(new Color(255, 255, 255));
 			comboBoxDodaj.setBackground(new Color(102, 153, 102));
 			comboBoxDodaj.setFont(new Font("Open Sans", Font.PLAIN, 13));
@@ -282,6 +281,7 @@ public class AdministracijaGUI extends JFrame {
 	private JComboBox getComboBox3() {
 		if (comboBox3 == null) {
 			comboBox3 = new JComboBox();
+			comboBox3.setEnabled(false);
 			comboBox3.setForeground(new Color(255, 255, 255));
 			comboBox3.setBackground(new Color(102, 153, 102));
 			comboBox3.setBounds(200, 60, 71, 20);
