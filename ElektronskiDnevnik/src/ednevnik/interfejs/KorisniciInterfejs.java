@@ -8,8 +8,8 @@ import ednevnik.Roditelj;
 public interface KorisniciInterfejs {
 	public void dodajProfesora(Profesor prof);
 	public void dodajRoditelja(Roditelj r);
-	public void serijalizujRod(Roditelj r);
-	public void serijalizujProf(Profesor p);
+	public void serijalizujRod(LinkedList<Roditelj> roditelji);
+	public void serijalizujProf(LinkedList<Profesor> profesori);
 	public void deserijalizujRod(LinkedList<Roditelj> roditelji);
 	public void deserijalizujProf(LinkedList<Profesor> profesori);
 	public boolean uporediRoditelja(String korisnickoIme,String sifra);

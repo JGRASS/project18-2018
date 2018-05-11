@@ -33,13 +33,13 @@ public class Korisnici implements KorisniciInterfejs {
 	}
 
 	@Override
-	public void serijalizujRod(Roditelj r) {
-		SOSerijalizujRoditelja.izvrsi(r);
+	public void serijalizujRod(LinkedList<Roditelj> roditelji) {
+		SOSerijalizujRoditelja.izvrsi(roditelji);
 	}
 
 	@Override
-	public void serijalizujProf(Profesor p) {
-		SOSerijalizujProfesora.izvrsi(p);
+	public void serijalizujProf(LinkedList<Profesor> profesori) {
+		SOSerijalizujProfesora.izvrsi(profesori);
 	}
 
 	@Override
