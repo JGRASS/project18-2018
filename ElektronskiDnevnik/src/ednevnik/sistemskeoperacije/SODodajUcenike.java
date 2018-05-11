@@ -21,8 +21,14 @@ public class SODodajUcenike {
 	 * @param brojRazreda redni broj razreda
 	 * @param brojOdeljenja 
 	 */
-	public static void izvrsi (Ucenik ucenik, LinkedList<Razred> razredi, int brojRazreda, 
+	public static void izvrsi (String imePrezime, String imeRoditelja, String JMBG, LinkedList<Razred> razredi, int brojRazreda, 
 			int brojOdeljenja) {
+		
+		Ucenik ucenik = new Ucenik();
+		
+		ucenik.setImePrezime(imePrezime);
+		ucenik.setImeRoditelja(imeRoditelja);
+		ucenik.setJmbg(JMBG);
 		
 		if (ucenik == null)
 			throw new RuntimeException("Ucenik ne sme biti null!");

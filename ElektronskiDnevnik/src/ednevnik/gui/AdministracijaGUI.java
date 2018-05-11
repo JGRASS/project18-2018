@@ -142,6 +142,7 @@ public class AdministracijaGUI extends JFrame {
 			
 			JComboBox comboBox = new JComboBox();
 			comboBox.setEnabled(false);
+			comboBox.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5", "6", "7", "8"}));
 			comboBox.setBounds(200, 134, 71, 20);
 			panel.add(comboBox);
 		}
