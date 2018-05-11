@@ -44,12 +44,12 @@ public class Korisnici implements KorisniciInterfejs {
 
 	@Override
 	public void deserijalizujRod(LinkedList<Roditelj> roditelji) {
-		SODeserijalizujRoditelje.izvrsi(roditelji);
+		roditelji = SODeserijalizujRoditelje.izvrsi();
 	}
 
 	@Override
 	public void deserijalizujProf(LinkedList<Profesor> profesori) {
-		SODeserijalizujProfesore.izvrsi(profesori);
+		profesori = SODeserijalizujProfesore.izvrsi();
 	}
 
 	@Override

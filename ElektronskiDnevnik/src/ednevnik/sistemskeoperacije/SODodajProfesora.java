@@ -23,6 +23,7 @@ public class SODodajProfesora {
 		if(prof==null || profesori.contains(prof))
 			throw new RuntimeException();
 		
+		
 		profesori.add(prof);
 		
 	}
