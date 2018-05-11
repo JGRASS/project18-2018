@@ -109,7 +109,6 @@ public class AdministracijaGUI extends JFrame {
 	private JPanel getPanel() {
 		if (panel == null) {
 			panel = new JPanel();
-			panel.setVisible(false);
 			panel.setBackground(new Color(204, 255, 153));
 			panel.setPreferredSize(new Dimension(300, 10));
 			panel.setLayout(null);
