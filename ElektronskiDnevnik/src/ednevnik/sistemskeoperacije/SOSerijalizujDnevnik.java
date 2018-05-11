@@ -1,5 +1,11 @@
 package ednevnik.sistemskeoperacije;
-
+/**
+* Klasa koja sadrzi metodu SOSerijalizujDnevnik
+* @author Milos Pecikoza
+* @author Ana Slovic
+* @author Aleksa Vucetic
+* @version 1.0
+*/
 import java.io.BufferedOutputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -10,6 +16,10 @@ import ednevnik.EDnevnik;
 
 public class SOSerijalizujDnevnik {
 	
+	/**
+	 * Metoda koja izvrsava serijalizaciju dnevnika
+	 * @param d je objekat dnevnika koji treba da se serijalizuje
+	 */
 	public static void izvrsi(EDnevnik d) {
 		try (			ObjectOutputStream out = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream("Dnevnik.out")))){
 			out.writeObject(d);

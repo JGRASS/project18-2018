@@ -88,8 +88,8 @@ public class EDnevnik implements EDnevnikInterfejs, Serializable{
 	}
 
 	@Override
-	public void dodajUcenike(Ucenik ucenik, int brojRazreda, int brojOdeljenja) {
-		SODodajUcenike.izvrsi(ucenik, razredi, brojRazreda, brojOdeljenja);
+	public void dodajUcenike(String imePrezime, String imeRoditelja, String jmbg, int brojRazreda, int brojOdeljenja) {
+		SODodajUcenike.izvrsi(imePrezime, imeRoditelja, jmbg, razredi, brojRazreda, brojOdeljenja);
 	}
 
 	@Override
