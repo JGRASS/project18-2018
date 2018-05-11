@@ -24,21 +24,6 @@ public class RoditeljGUI extends JFrame {
 	private JTextField textFieldImeIPrezimeUcenika;
 	private JTextField textFieldJMBGUcenika;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					RoditeljGUI frame = new RoditeljGUI();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
 	/**
 	 * Create the frame.

@@ -9,7 +9,7 @@ import ednevnik.EDnevnik;
 public class SODeserijalizujDnevnik {
 	
 	public static EDnevnik izvrsi() {
-		EDnevnik d = new EDnevnik();
+		
 		try(ObjectInputStream in = new ObjectInputStream(new BufferedInputStream(new FileInputStream("Dnevnik.out")))){
 			return (EDnevnik)in.readObject();
 		}catch (Exception e) {

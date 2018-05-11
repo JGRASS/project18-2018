@@ -3,6 +3,7 @@ package ednevnik.sistemskeoperacije;
 import java.util.LinkedList;
 
 import ednevnik.Profesor;
+import ednevnik.Roditelj;
 
 /**
  * Klasa koja sadrzi metodu SODodajProfesora
@@ -15,21 +16,14 @@ public class SODodajProfesora {
 
 	/**
 	 * Metoda koja dodaje profesora u listu profesora koji imaju pristup sistemu
-	 * @param imePrezime profesora
-	 * @param korisnickoIme profesora
-	 * @param sifra profesora
-	 * @param profesori lista profesora
-	 * @return listu profesora 
+	 * @param prof Profesor 
+	 * @param profesori lista profesora 
 	 */
-	public static LinkedList<Profesor> izvrsi(String imePrezime,String korisnickoIme, String sifra,LinkedList<Profesor> profesori) {
-		Profesor p = new Profesor();
+	public static void izvrsi(Profesor prof,LinkedList<Profesor> profesori) {
+		if(prof==null || profesori.contains(prof))
+			throw new RuntimeException();
 		
-		p.setImePrezime(imePrezime);
-		p.setKorisnicnoIme(korisnickoIme);
-		p.setSifra(sifra);
+		profesori.add(prof);
 		
-		profesori.add(p);
-		
-		return profesori;
 	}
 }

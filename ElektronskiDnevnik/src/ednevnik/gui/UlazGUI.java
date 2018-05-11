@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import ednevnik.gui.kontroler.GUIKontroler;
+
 import java.awt.Toolkit;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -24,6 +27,8 @@ import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class UlazGUI extends JFrame {
 
@@ -222,10 +227,28 @@ public class UlazGUI extends JFrame {
 	private JButton getBtnPrijaviSe() {
 		if (btnPrijaviSe == null) {
 			btnPrijaviSe = new JButton("Prijavi se");
+			btnPrijaviSe.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {	
+						GUIKontroler.prikaziAdministracijaGUI(rdbtnAdministracija.isSelected(),
+								textFieldKorisnickoIme, passwordField);
+						GUIKontroler.prikaziRoditeljGUI(rdbtnRoditelj.isSelected(), textFieldKorisnickoIme, passwordField);
+					
+				}
+			});
 			btnPrijaviSe.setBackground(new Color(204, 255, 153));
 			btnPrijaviSe.setFont(new Font("Open Sans", Font.PLAIN, 11));
 			btnPrijaviSe.setBounds(166, 210, 100, 23);
 		}
 		return btnPrijaviSe;
+	}
+	
+	public void ulogujSe() {
+		
+		
+		
+			
+		
+		
+		
 	}
 }
