@@ -53,21 +53,6 @@ public class UlazGUI extends JFrame {
 	private JPasswordField passwordField;
 	private JButton btnPrijaviSe;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					UlazGUI frame = new UlazGUI();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
 	/**
 	 * Create the frame.

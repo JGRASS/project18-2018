@@ -45,22 +45,6 @@ public class RoditeljGUINastavak extends JFrame {
 	private JTextField textField_27;
 
 	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					RoditeljGUINastavak frame = new RoditeljGUINastavak();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
 	 * Create the frame.
 	 */
 	public RoditeljGUINastavak() {
