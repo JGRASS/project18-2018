@@ -7,6 +7,7 @@ import ednevnik.sistemskeoperacije.SODeserijalizujProfesore;
 import ednevnik.sistemskeoperacije.SODeserijalizujRoditelje;
 import ednevnik.sistemskeoperacije.SODodajProfesora;
 import ednevnik.sistemskeoperacije.SODodajRoditelje;
+import ednevnik.sistemskeoperacije.SOPorediProfesora;
 import ednevnik.sistemskeoperacije.SOSerijalizujProfesora;
 import ednevnik.sistemskeoperacije.SOSerijalizujRoditelja;
 import ednevnik.sistemskeoperacije.SOUporediRoditelja;
@@ -54,6 +55,11 @@ public class Korisnici implements KorisniciInterfejs {
 	@Override
 	public boolean uporediRoditelja(String korisnickoIme,String sifra) {
 		return SOUporediRoditelja.izvrsi(korisnickoIme, sifra, roditelji);
+	}
+
+	@Override
+	public boolean uporediProfesora(String korisnickoIme, String sifra) {
+		return SOPorediProfesora.izvrsi(korisnickoIme, sifra, profesori);
 	}
 	
 	

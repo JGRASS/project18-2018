@@ -232,7 +232,7 @@ public class UlazGUI extends JFrame {
 						GUIKontroler.prikaziAdministracijaGUI(rdbtnAdministracija.isSelected(),
 								textFieldKorisnickoIme, passwordField);
 						GUIKontroler.prikaziRoditeljGUI(rdbtnRoditelj.isSelected(), textFieldKorisnickoIme, passwordField);
-					
+						GUIKontroler.prikaziProfesorGUI(rdbtnProfesor.isSelected(), textFieldKorisnickoIme, passwordField);
 				}
 			});
 			btnPrijaviSe.setBackground(new Color(204, 255, 153));
@@ -242,13 +242,4 @@ public class UlazGUI extends JFrame {
 		return btnPrijaviSe;
 	}
 	
-	public void ulogujSe() {
-		
-		
-		
-			
-		
-		
-		
-	}
 }

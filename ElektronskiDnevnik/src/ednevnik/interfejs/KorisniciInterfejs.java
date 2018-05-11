@@ -13,4 +13,5 @@ public interface KorisniciInterfejs {
 	public void deserijalizujRod(LinkedList<Roditelj> roditelji);
 	public void deserijalizujProf(LinkedList<Profesor> profesori);
 	public boolean uporediRoditelja(String korisnickoIme,String sifra);
+	public boolean uporediProfesora(String korisnickoIme,String sifra);
 }
