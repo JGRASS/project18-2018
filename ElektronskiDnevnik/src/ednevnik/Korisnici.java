@@ -7,6 +7,7 @@ import ednevnik.sistemskeoperacije.SODeserijalizujProfesore;
 import ednevnik.sistemskeoperacije.SODeserijalizujRoditelje;
 import ednevnik.sistemskeoperacije.SODodajProfesora;
 import ednevnik.sistemskeoperacije.SODodajRoditelje;
+import ednevnik.sistemskeoperacije.SOObrisiProfesora;
 import ednevnik.sistemskeoperacije.SOPorediProfesora;
 import ednevnik.sistemskeoperacije.SOSerijalizujProfesora;
 import ednevnik.sistemskeoperacije.SOSerijalizujRoditelja;
@@ -60,6 +61,16 @@ public class Korisnici implements KorisniciInterfejs {
 	@Override
 	public boolean uporediProfesora(String korisnickoIme, String sifra) {
 		return SOPorediProfesora.izvrsi(korisnickoIme, sifra, profesori);
+	}
+
+	@Override
+	public void obrisiProfesora(LinkedList<Profesor> profesori, String imePrezime) {
+		
+		profesori = SODeserijalizujProfesore.izvrsi();
+		
+		SOObrisiProfesora.izvrsi(profesori, imePrezime);
+		
+		SOSerijalizujProfesora.izvrsi(profesori);
 	}
 	
 	
