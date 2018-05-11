@@ -26,6 +26,7 @@ import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 
 public class AdministracijaGUI extends JFrame {
 
@@ -53,6 +54,7 @@ public class AdministracijaGUI extends JFrame {
 	private JMenuItem mntmZatvori;
 	private JMenuItem mntmAbout;
 	private JComboBox comboBox3;
+	private JButton btnNewButton_1;
 	
 
 	/**
@@ -131,6 +133,7 @@ public class AdministracijaGUI extends JFrame {
 			comboBox.setModel(new DefaultComboBoxModel(new String[] {"1", "2", "3", "4", "5", "6", "7", "8"}));
 			comboBox.setBounds(200, 134, 71, 20);
 			panel.add(comboBox);
+			panel.add(getBtnNewButton_1());
 		}
 		return panel;
 	}
@@ -191,7 +194,6 @@ public class AdministracijaGUI extends JFrame {
 			btnDodaj.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
 					GUIKontroler.prikaziDodajProfesoraGUI(comboBoxDodaj.getSelectedItem().equals("Profesor"));
-					GUIKontroler.prikaziSveProfesore(textAreaPrikaz);
 				}
 			});
 			btnDodaj.setFont(new Font("Open Sans", Font.PLAIN, 13));
@@ -282,5 +284,19 @@ public class AdministracijaGUI extends JFrame {
 		}
 		return comboBox3;
 	}
-	
+	private JButton getBtnNewButton_1() {
+		if (btnNewButton_1 == null) {
+			btnNewButton_1 = new JButton("Odjavi se");
+			btnNewButton_1.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					JOptionPane.showConfirmDialog(contentPane, "Da li ste sigurni da zelite da se odjavite?","Odjavi se", JOptionPane.YES_NO_OPTION);
+					dispose();
+					
+				}
+			});
+			btnNewButton_1.setFont(new Font("Open Sans", Font.PLAIN, 13));
+			btnNewButton_1.setBounds(189, 291, 101, 27);
+		}
+		return btnNewButton_1;
+	}
 }

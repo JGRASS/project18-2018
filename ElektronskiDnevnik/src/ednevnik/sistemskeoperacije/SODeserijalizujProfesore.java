@@ -10,10 +10,10 @@ import ednevnik.Profesor;
 public class SODeserijalizujProfesore {
 	public static LinkedList<Profesor> izvrsi() {
 		try(ObjectInputStream in = new ObjectInputStream(
-				new BufferedInputStream(new FileInputStream("Profesori.out")))){
+				new BufferedInputStream(new FileInputStream("fajlovi/Profesori.out")))){
 			return (LinkedList<Profesor>)(in.readObject());
 		}catch(Exception e){
-			throw new RuntimeException(e);
+			return new LinkedList<Profesor>();
 		}
 	}
 }

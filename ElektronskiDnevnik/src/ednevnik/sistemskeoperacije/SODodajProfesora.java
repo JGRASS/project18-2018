@@ -20,9 +20,10 @@ public class SODodajProfesora {
 	 * @param profesori lista profesora 
 	 */
 	public static void izvrsi(Profesor prof,LinkedList<Profesor> profesori) {
-		if(prof==null || profesori.contains(prof))
-			throw new RuntimeException();
-		
+		if(prof==null)
+			throw new RuntimeException("Profesor ne moze biti null.");
+		if(profesori.contains(prof))
+			throw new RuntimeException("Profesor je vec unet u listu profesora.");
 		
 		profesori.add(prof);
 		

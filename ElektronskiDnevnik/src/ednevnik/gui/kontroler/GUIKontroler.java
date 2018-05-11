@@ -124,7 +124,6 @@ public class GUIKontroler {
 			korisnici.dodajProfesora(p);
 			
 			
-			
 		} catch (Exception e1) {
 			JOptionPane.showMessageDialog(null, e1.getMessage(),
 					"Greska", JOptionPane.ERROR_MESSAGE);

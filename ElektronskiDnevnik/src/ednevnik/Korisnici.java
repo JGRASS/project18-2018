@@ -17,6 +17,10 @@ import ednevnik.sistemskeoperacije.SOSerijalizujRoditelja;
 import ednevnik.sistemskeoperacije.SOUporediRoditelja;
 
 public class Korisnici implements KorisniciInterfejs, Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private LinkedList<Roditelj> roditelji = new LinkedList<Roditelj>();
 	private LinkedList<Profesor> profesori = new LinkedList<Profesor>();
 	
@@ -29,12 +33,8 @@ public class Korisnici implements KorisniciInterfejs, Serializable {
 	}
 	
 	public void dodajProfesora(Profesor prof) {
-		if(!profesori.isEmpty()) {
-			profesori = SODeserijalizujProfesore.izvrsi();
-		}
-		
-		SODodajProfesora.izvrsi(prof,profesori);
-		
+		profesori = SODeserijalizujProfesore.izvrsi();
+		SODodajProfesora.izvrsi(prof, profesori);
 		SOSerijalizujProfesora.izvrsi(profesori);
 	}
 	
@@ -69,6 +69,7 @@ public class Korisnici implements KorisniciInterfejs, Serializable {
 
 	@Override
 	public boolean uporediProfesora(String korisnickoIme, String sifra) {
+		profesori = SODeserijalizujProfesore.izvrsi();
 		return SOPorediProfesora.izvrsi(korisnickoIme, sifra, profesori);
 	}
 
@@ -84,9 +85,8 @@ public class Korisnici implements KorisniciInterfejs, Serializable {
 
 	@Override
 	public String prikaziSveProfesore() {
+		profesori = SODeserijalizujProfesore.izvrsi();
 		return SOPrikaziSveProfesore.izvrsi(profesori);
-		
 	}
-	
 	
 }

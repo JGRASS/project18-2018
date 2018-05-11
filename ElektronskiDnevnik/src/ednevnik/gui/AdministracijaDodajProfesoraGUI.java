@@ -31,7 +31,7 @@ public class AdministracijaDodajProfesoraGUI extends JFrame {
 	public AdministracijaDodajProfesoraGUI() {
 		setTitle("Dodaj profesora");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(AdministracijaDodajProfesoraGUI.class.getResource("/icons/Shield-iconNajmanja.png")));
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(204, 255, 153));
@@ -73,6 +73,7 @@ public class AdministracijaDodajProfesoraGUI extends JFrame {
 		btnDodaj.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				GUIKontroler.dodajProfesora(textFieldImeIPrezimeProfesora.getText(), textFieldKIme.getText(), textFieldLozinka.getText());
+				dispose();
 			}
 		});
 		btnDodaj.setBounds(170, 203, 89, 23);

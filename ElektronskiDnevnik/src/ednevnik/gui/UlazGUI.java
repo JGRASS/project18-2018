@@ -233,6 +233,8 @@ public class UlazGUI extends JFrame {
 								textFieldKorisnickoIme, passwordField);
 						GUIKontroler.prikaziRoditeljGUI(rdbtnRoditelj.isSelected(), textFieldKorisnickoIme, passwordField);
 						GUIKontroler.prikaziProfesorGUI(rdbtnProfesor.isSelected(), textFieldKorisnickoIme, passwordField);
+						textFieldKorisnickoIme.setText("");
+						passwordField.setText("");
 				}
 			});
 			btnPrijaviSe.setBackground(new Color(204, 255, 153));

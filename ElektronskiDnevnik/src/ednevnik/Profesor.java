@@ -130,7 +130,7 @@ public class Profesor implements Serializable{
 
 	@Override
 	public String toString() {
-		return "Profesor [imePrezime=" + imePrezime + ", korisnickoIme=" + korisnickoIme + "]";
+		return "Profesor:"+"\n"+"\t"+ "Ime i prezime: " + imePrezime + "\n"+"\t"+"Korisnickoime: "+ korisnickoIme ;
 	}
 	
 	

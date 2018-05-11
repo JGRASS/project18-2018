@@ -9,10 +9,10 @@ import ednevnik.Profesor;
 
 public class SOSerijalizujProfesora {
 	public static void izvrsi(LinkedList<Profesor> p) {
-		try (ObjectOutputStream out = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream("Profesori.out")))){
+		try (ObjectOutputStream out = new ObjectOutputStream(new BufferedOutputStream(new FileOutputStream("fajlovi/Profesori.out")))){
 			out.writeObject(p);
 		} catch (Exception e) {
-			e.printStackTrace();
+			throw new RuntimeException();
 		}
 	}
 }
