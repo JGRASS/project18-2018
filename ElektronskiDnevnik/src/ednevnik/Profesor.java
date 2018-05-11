@@ -125,6 +125,11 @@ public class Profesor {
 			return false;
 		return true;
 	}
+
+	@Override
+	public String toString() {
+		return "Profesor [imePrezime=" + imePrezime + ", korisnickoIme=" + korisnickoIme + "]";
+	}
 	
 	
 	
