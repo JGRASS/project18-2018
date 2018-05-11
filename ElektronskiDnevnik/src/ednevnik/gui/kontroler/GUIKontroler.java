@@ -43,7 +43,7 @@ public class GUIKontroler {
 			String sifra="";
 			for(int i=0;i<pass.getPassword().length;i++)
 				sifra +=pass.getPassword()[i];
-			if(kIme.equals("admin") && sifra.equals("nosleep123")) {
+			if(kIme.getText().equals("admin") && sifra.equals("nosleep123")) {
 				AdministracijaGUI prozor = new AdministracijaGUI();
 				prozor.setLocationRelativeTo(null);
 				prozor.setVisible(true);
