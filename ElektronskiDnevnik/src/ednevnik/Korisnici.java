@@ -25,8 +25,13 @@ public class Korisnici implements KorisniciInterfejs {
 		return profesori;
 	}
 	
-	public void dodajProfesora(Profesor prof) {
+	public void dodajProfesora(LinkedList<Profesor> profesori, Profesor prof) {
+		
+		profesori = SODeserijalizujProfesore.izvrsi();
+		
 		SODodajProfesora.izvrsi(prof,profesori);
+		
+		SOSerijalizujProfesora.izvrsi(profesori);
 	}
 	
 	public void dodajRoditelja(Roditelj rod) {
