@@ -1,5 +1,7 @@
 package ednevnik;
 
+import java.io.Serializable;
+
 /**
  * Klasa koja sadrzi atribute imePrezime profesora, koriscnikoIme profesora i sifru profesora 
  * @author Milos Pecikoza
@@ -7,7 +9,7 @@ package ednevnik;
  * @author Aleksa Vucetic
  * @version 1.0
  */
-public class Profesor {
+public class Profesor implements Serializable{
 	
 	/**
 	 * Atribut koji predstavlja ime i prezime profesora

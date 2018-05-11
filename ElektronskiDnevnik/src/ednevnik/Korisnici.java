@@ -1,8 +1,8 @@
 package ednevnik;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 
-import javax.swing.plaf.synth.SynthOptionPaneUI;
 
 import ednevnik.interfejs.KorisniciInterfejs;
 import ednevnik.sistemskeoperacije.SODeserijalizujProfesore;
@@ -16,7 +16,7 @@ import ednevnik.sistemskeoperacije.SOSerijalizujProfesora;
 import ednevnik.sistemskeoperacije.SOSerijalizujRoditelja;
 import ednevnik.sistemskeoperacije.SOUporediRoditelja;
 
-public class Korisnici implements KorisniciInterfejs {
+public class Korisnici implements KorisniciInterfejs, Serializable {
 	private LinkedList<Roditelj> roditelji = new LinkedList<Roditelj>();
 	private LinkedList<Profesor> profesori = new LinkedList<Profesor>();
 	
@@ -28,9 +28,10 @@ public class Korisnici implements KorisniciInterfejs {
 		return profesori;
 	}
 	
-	public void dodajProfesora(LinkedList<Profesor> profesori, Profesor prof) {
-		
-		profesori = SODeserijalizujProfesore.izvrsi();
+	public void dodajProfesora(Profesor prof) {
+		if(!profesori.isEmpty()) {
+			profesori = SODeserijalizujProfesore.izvrsi();
+		}
 		
 		SODodajProfesora.izvrsi(prof,profesori);
 		

@@ -9,12 +9,15 @@ import javax.swing.JTextField;
 
 import ednevnik.EDnevnik;
 import ednevnik.Korisnici;
+import ednevnik.Profesor;
+import ednevnik.gui.AdministracijaDodajProfesoraGUI;
 import ednevnik.gui.AdministracijaGUI;
 import ednevnik.gui.ProfesorGUI;
 import ednevnik.gui.RoditeljGUI;
 import ednevnik.gui.UlazGUI;
 import ednevnik.interfejs.EDnevnikInterfejs;
 import ednevnik.interfejs.KorisniciInterfejs;
+
 
 
 public class GUIKontroler {
@@ -56,6 +59,14 @@ public class GUIKontroler {
 			
 			}
 		}
+	}
+	public static void prikaziDodajProfesoraGUI(boolean selected) {
+		if(selected) {
+			AdministracijaDodajProfesoraGUI adp = new AdministracijaDodajProfesoraGUI();
+			adp.setLocationRelativeTo(null);
+			adp.setVisible(true);
+		}
+		
 	}
 	
 	public static void prikaziRoditeljGUI(boolean selected,JTextField kIme,JPasswordField pass) {
@@ -102,7 +113,23 @@ public class GUIKontroler {
 		area.setText(korisnici.prikaziSveProfesore());
 	}
 	
-	
+	public static void dodajProfesora(String imePrezime, String korisnickoIme,String sifra) {
+		try {
+			Profesor p = new Profesor();
+
+			p.setImePrezime(imePrezime);
+			p.setKorisnicnoIme(korisnickoIme);
+			p.setSifra(sifra);
+			
+			korisnici.dodajProfesora(p);
+			
+			
+			
+		} catch (Exception e1) {
+			JOptionPane.showMessageDialog(null, e1.getMessage(),
+					"Greska", JOptionPane.ERROR_MESSAGE);
+		}
+	}
 	
 	
 	

@@ -6,6 +6,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import ednevnik.gui.kontroler.GUIKontroler;
+
 import java.awt.Toolkit;
 import javax.swing.JMenuBar;
 import javax.swing.JMenu;
@@ -150,6 +153,11 @@ public class AdministracijaGUI extends JFrame {
 	private JButton getBtnProfesore() {
 		if (btnProfesore == null) {
 			btnProfesore = new JButton("Profesore");
+			btnProfesore.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					GUIKontroler.prikaziSveProfesore(textAreaPrikaz);
+				}
+			});
 			btnProfesore.setBackground(new Color(255, 255, 255));
 			btnProfesore.setFont(new Font("Open Sans", Font.PLAIN, 13));
 			btnProfesore.setBounds(83, 24, 107, 23);
@@ -182,6 +190,8 @@ public class AdministracijaGUI extends JFrame {
 			btnDodaj.setBackground(new Color(255, 255, 255));
 			btnDodaj.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
+					GUIKontroler.prikaziDodajProfesoraGUI(comboBoxDodaj.getSelectedItem().equals("Profesor"));
+					GUIKontroler.prikaziSveProfesore(textAreaPrikaz);
 				}
 			});
 			btnDodaj.setFont(new Font("Open Sans", Font.PLAIN, 13));

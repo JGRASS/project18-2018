@@ -1,5 +1,7 @@
 package ednevnik;
 
+import java.io.Serializable;
+
 /**
  * Klasa koja sadrzi atribute imePrezime, jmbg, korisnickoIme i sifru roditelja
  * @author Milos Pecikoza
@@ -7,7 +9,7 @@ package ednevnik;
  * @author Aleksa Vucetic
  * @version 1.0
  */
-public class Roditelj {
+public class Roditelj implements Serializable {
 	
 	/**
 	 * Atribut koji pokazuje ime i prezime roditelja

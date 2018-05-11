@@ -11,7 +11,7 @@ import ednevnik.Roditelj;
 public class SODeserijalizujRoditelje {
 	public static LinkedList<Roditelj> izvrsi() {
 		try(ObjectInputStream in = new ObjectInputStream(
-				new BufferedInputStream(new FileInputStream("Roditelji.out")));){
+				new BufferedInputStream(new FileInputStream("Roditelji.out")))){
 			return (LinkedList<Roditelj>)(in.readObject());
 		}catch(Exception e){
 			throw new RuntimeException(e);
