@@ -4,6 +4,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 import ednevnik.EDnevnik;
@@ -96,4 +97,15 @@ public class GUIKontroler {
 		}
 		return;
 	}
+	
+	public static void prikaziSveProfesore(JTextArea area) {
+		area.setText(korisnici.prikaziSveProfesore());
+	}
+	
+	
+	
+	
+	
+	
+	
 }

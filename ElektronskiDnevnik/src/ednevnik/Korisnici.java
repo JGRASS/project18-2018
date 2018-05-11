@@ -2,6 +2,8 @@ package ednevnik;
 
 import java.util.LinkedList;
 
+import javax.swing.plaf.synth.SynthOptionPaneUI;
+
 import ednevnik.interfejs.KorisniciInterfejs;
 import ednevnik.sistemskeoperacije.SODeserijalizujProfesore;
 import ednevnik.sistemskeoperacije.SODeserijalizujRoditelje;
@@ -9,6 +11,7 @@ import ednevnik.sistemskeoperacije.SODodajProfesora;
 import ednevnik.sistemskeoperacije.SODodajRoditelje;
 import ednevnik.sistemskeoperacije.SOObrisiProfesora;
 import ednevnik.sistemskeoperacije.SOPorediProfesora;
+import ednevnik.sistemskeoperacije.SOPrikaziSveProfesore;
 import ednevnik.sistemskeoperacije.SOSerijalizujProfesora;
 import ednevnik.sistemskeoperacije.SOSerijalizujRoditelja;
 import ednevnik.sistemskeoperacije.SOUporediRoditelja;
@@ -71,6 +74,12 @@ public class Korisnici implements KorisniciInterfejs {
 		SOObrisiProfesora.izvrsi(profesori, imePrezime);
 		
 		SOSerijalizujProfesora.izvrsi(profesori);
+	}
+
+	@Override
+	public String prikaziSveProfesore() {
+		return SOPrikaziSveProfesore.izvrsi(profesori);
+		
 	}
 	
 	
