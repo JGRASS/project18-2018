@@ -6,7 +6,7 @@ import ednevnik.Profesor;
 import ednevnik.Roditelj;
 
 public interface KorisniciInterfejs {
-	public void dodajProfesora(Profesor prof);
+	public void dodajProfesora(LinkedList<Profesor> profesori, Profesor prof);
 	public void dodajRoditelja(Roditelj r);
 	public void serijalizujRod(LinkedList<Roditelj> roditelji);
 	public void serijalizujProf(LinkedList<Profesor> profesori);
