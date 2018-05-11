@@ -16,22 +16,49 @@ import ednevnik.sistemskeoperacije.SOSerijalizujProfesora;
 import ednevnik.sistemskeoperacije.SOSerijalizujRoditelja;
 import ednevnik.sistemskeoperacije.SOUporediRoditelja;
 
+/**
+ * Klasa koja sadrzi lisut roditelj i listu profesora sa metoda dodajProfesora, dodajRoditelja, SerijalizujRoditelja, SerijalizujProfesora,
+ * deserijalizujRoditelja, DeserijalizujProfesora, uporediRoditelja, uporediProfesora, obrisiProfesora, prikaziSveProfesore
+ * @author Milos Pecikoza
+ * @author Ana Slovic
+ * @author Aleksa Vucetic
+ * @version 1.0
+ */
 public class Korisnici implements KorisniciInterfejs, Serializable {
-	/**
-	 * 
-	 */
+
 	private static final long serialVersionUID = 1L;
+
+	/**
+	 * Lista koja sadrzi objekte klase Roditelj
+	 */
+
 	private LinkedList<Roditelj> roditelji = new LinkedList<Roditelj>();
+	
+	/**
+	 * Lista koja sadrzi objekte klase Profesor
+	 */
 	private LinkedList<Profesor> profesori = new LinkedList<Profesor>();
 	
+	/**
+	 * Metoda koa vraca listu roditelja
+	 * @return lista objekata klase Roditelj
+	 */
 	public LinkedList<Roditelj> getRoditelji() {
 		return roditelji;
 	}
 	
+	/**
+	 * Metoda koa vraca listu profesora
+	 * @return lista objekata klase Profesor
+	 */
 	public LinkedList<Profesor> getProfesori() {
 		return profesori;
 	}
 	
+	/**
+	 * Metoda koja dodaje profesora u listu profesora
+	 * @param prof objekat klase Profesor koji se dodaje u listu
+	 */
 	public void dodajProfesora(Profesor prof) {
 		profesori = SODeserijalizujProfesore.izvrsi();
 		SODodajProfesora.izvrsi(prof, profesori);
